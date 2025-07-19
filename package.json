@@ -1,0 +1,33 @@
+{
+  "name": "mockinterviewprep",
+  "version": "1.0.0",
+  "description": "Interview booking platform connecting students with industry professionals",
+  "private": true,
+  "scripts": {
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm run install:frontend && npm run install:backend",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "cd frontend && npm run build",
+    "test": "concurrently \"cd frontend && npm test\" \"cd backend && npm test\"",
+    "clean": "rm -rf frontend/node_modules backend/node_modules frontend/dist"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "keywords": [
+    "interview",
+    "booking",
+    "react",
+    "express",
+    "nodejs"
+  ],
+  "author": "MockInterviewPrep Team",
+  "license": "MIT"
+}
